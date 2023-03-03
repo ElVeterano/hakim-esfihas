@@ -1,0 +1,363 @@
+/* Folha de estilo Hakim Esfihas */
+
+/*importacao das fontes google */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background: url(img/sobrefundo.png)
+}
+
+/* CSS reset */
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+
+/* Layout */
+
+.container {
+    margin: 0 auto;
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.Flex3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
+/* voltar ao topo do site */
+
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    color: #fff;
+}
+
+/* LOGO PRINCIPAL */
+#logo img{
+   border-radius: 100px;
+}
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Cabecalho */
+
+header {
+    height: 60px;
+   
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+/* MENU LATERAL ESCONDIDO */
+
+#check {
+    display: none;
+}
+
+#check:checked ~ ul {
+    right: 0px;
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    background-color: brown;
+    height: 100vh;
+    top: 60px;
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #DAA520;
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* FIM DO MENU */
+
+/* DESTAQUE */
+
+main {
+    background: url(img/madeirafundo.png);
+    height: 75vh;
+    background-size: cover;
+    color: #fff;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
+}
+
+/* SOBRE */
+
+#sobre {
+    padding: 50px 0px;
+    background: url(img/sobrefundo.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#destaqueSobre {
+    display: none;
+}
+
+#textoSobre {
+    color: #fff;
+    padding: 0px, 10px;
+    text-shadow: #000 0.5em 0.5em 0.5em;
+}
+
+#textoSobre h2 {
+    margin-bottom: 15px;
+    font-size: 4em;
+    color: bisque;
+}
+
+.topicoSobre {
+    margin-top: 20px;
+}
+
+.topicoSobre i {
+    margin-right: 40px;
+}
+
+/* SECAO VIDEO */
+
+    #secaoVideo {
+        padding: 50px 10px;
+        background: url(img/madeirafundo.png);
+        color: #fff;
+        text-shadow: #000 0.5em 0.5em 0.5em;
+        font-weight: bold;
+    }
+
+    #secaoVideo h2 {
+        margin: 10px;
+    }
+
+    #secaoVideo p {
+        margin-bottom: 25px;
+    }
+
+    #video iframe {
+        width: 340px;
+        height: 191px; /*Utilizar site aspect ratio para calcular as dimensoes */
+        border: 0;
+    }
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 576px) {
+
+    /* Layout */
+
+    .container {
+        max-width: 540px;
+    }
+
+    /* DESTAQUE */
+
+    main h1, main h2 {
+        text-shadow: #000 0.5em 0.5em 0.5em;
+    }
+
+    /*SECAO VIDEO*/
+    #video iframe {
+        width: 560px;
+        height: 315px; 
+    }
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 768px) {
+
+     /* Layout */
+
+     .container {
+        max-width: 720px;
+    }
+
+    nav ul li a {
+        font-size: 2em;
+    }
+
+    /*DESTAQUE */
+
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+}
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 992px) {
+
+     /* Layout */
+
+     .container {
+        max-width: 960px;
+    }
+
+    /* DESTAQUE */
+
+    main {
+        height: 70vh;
+    }
+}
+
+/* PC e Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (min-width: 1200px) {
+
+     /* Layout */
+
+     .container {
+        max-width: 1140px;
+    }
+
+    /* CABECALHO */
+    header {
+        height: 120px;
+    }
+
+    #logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent; /*removendo a cor background */
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        background-color: brown;
+        padding: 10px;
+        border: 2px outset #fff;
+    }
+
+    nav ul li a:hover {
+        color: brown;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    /* SOBRE */
+
+    #destaqueSobre {
+        display: inline;
+    }
+
+    #destaqueSobre img {
+        width: 400px;
+        border-radius: 20%;
+        border: 3px solid #fff;
+        margin-right: 50px;
+    }
+
+    #sobre {
+        background-attachment: fixed;
+    }
+
+    #sobre p {
+        font-size: 2.5em;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    /* Secao Video */
+    .Flex3 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #secaoVideo p {
+        font-size: 2em;
+    }
+
+    #secaoVideo h2 {
+        font-size: 2.5em;
+    }
+}
